@@ -18,6 +18,13 @@ Colour tokens
 /* ==========================
 Themes
 ============================= */
+html {
+  --bg-color: var(--c-deep-dark);
+  --text-color: var(--c-white);
+  --heading-color: var(--c-white);
+  --text-hover-color: var(--c-popping-orange);
+}
+
 html.dark {
   --bg-color: var(--c-deep-dark);
   --text-color: var(--c-white);

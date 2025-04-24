@@ -7,8 +7,9 @@ export default defineNuxtConfig({
     "@/components/atoms",
     { path: "@/components/blocks", global: true },
   ],
-  css: ["@/assets/scss/styles.scss"],
 
+  css: ["@/assets/scss/styles.scss"],
+  modules: ["nuxt-svgo", "@vueuse/nuxt"],
   app: {
     head: {
       htmlAttrs: {
