@@ -1,3 +1,33 @@
-.test {
-  color: blue;
-}
+/* purgecss start ignore */
+
+/* ==========================
+CSS Reset
+============================= */
+@import "core/reset";
+
+/* ==========================
+CORE STYLES AND CONFIG
+============================= */
+@import "core/global";
+@import "core/tokens";
+
+/* =================================
+COMPONENTS
+==================================== */
+@import "components/header";
+
+/* =================================
+LAYOUTS
+==================================== */
+@import "layouts/flex";
+@import "layouts/grid";
+@import "layouts/flow";
+@import "layouts/section";
+
+/* ==========================
+GENERATED UTILITIES
+============================= */
+@import "utilities/mixin";
+@import "utilities/colors";
+@import "utilities/fonts";
+@import "utilities/font-size";
