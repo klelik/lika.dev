@@ -1,5 +1,5 @@
 <template>
   <Masthead>
-    <template #title> Projects </template>
+    <template #title> Experience </template>
   </Masthead>
 </template>

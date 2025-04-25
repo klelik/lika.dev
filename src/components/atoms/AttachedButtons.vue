@@ -80,7 +80,6 @@ const getTransformStyle = computed(() => {
 
 const handleMouseOver = () => {
   hoverState.value = true;
-  console.log("hoverState.value", hoverState.value);
 };
 
 const handleMouseLeave = () => {

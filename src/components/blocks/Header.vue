@@ -24,7 +24,7 @@
           </ul>
         </nav>
         <div class="socials flex">
-          <DarkMode />
+          <!-- <DarkMode /> -->
           <AttachedButtons
             :link="{ url: 'mailto:youremail@example.com' }"
             :rotate="true"
@@ -67,7 +67,6 @@ const handleKeydownEvent = (event: KeyboardEvent) => {
 const toggle = () => {
   if (isOpen.value) close();
   else open();
-  console.log(isOpen.value);
 };
 const open = () => {
   document.addEventListener("DOWN", handleKeydownEvent);

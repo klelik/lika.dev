@@ -51,5 +51,9 @@
 </template>
 
 <script setup lang="ts">
-const isDarkTheme = document.documentElement.classList.contains("dark");
+let isDarkTheme = false;
+
+if (process.client) {
+  isDarkTheme = document.documentElement.classList.contains("dark");
+}
 </script>
