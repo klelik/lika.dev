@@ -1,5 +1,5 @@
 <template>
-  <div :class="['marquee', props.class]" :style="{ '--duration': duration, '--gap': gap }">
+  <div class="marquee" :style="{ '--duration': duration, '--gap': gap }">
     <div
       v-for="index in repeat"
       :key="index"

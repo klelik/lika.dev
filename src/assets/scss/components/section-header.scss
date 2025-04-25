@@ -36,6 +36,10 @@
 .section-header__title {
   font-weight: bold;
   color: var(--headings-color);
+  font-size: var(--ts-heading-3);
+  line-height: var(--lh-heading-3);
+  color: var(--text-color);
+  font-weight: 500;
 }
 
 .section-header__title-xl {

@@ -26,14 +26,8 @@
               <Arrow class="arrow-cta-highlighted--tiny" />
             </div>
           </template>
-          <template #title>
-            <h3 data-aos="fade-up" data-aos-delay="200" data-aos-once="true">The Human Behind the Code.</h3>
-          </template>
-          <template #description>
-            <p data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
-              Caffeine-powered problem solver with a keyboard.
-            </p>
-          </template>
+          <template #title> The Human Behind the Code. </template>
+          <template #description> Caffeine-powered problem solver with a keyboard. </template>
           <template #link>
             <div data-aos="zoom-in" data-aos-delay="100">
               <Arrow class="arrow-cta-highlighted slim" />
@@ -44,25 +38,22 @@
       <div class="container">
         <div class="grid grid-max-cols-2 grid-span-last">
           <div class="flow flow-gap-2 card card--spread-image card-overlay">
-            <h4 class="title" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="title" data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
               I'm a London-based Full-Stack Developer, building web solutions with a focus on the .NET ecosystem and
               modern frontends. Beyond the code, I'm an avid surfer, snowboarder, and explorer of new ideas – both
               tech-related side projects and the city's best spots
             </h4>
-            <!-- <p data-aos="fade-up" data-aos-delay="300">
-              I'm a London-based Full-Stack Developer, building web solutions with a focus on the .NET ecosystem and modern frontends. Beyond the code, I'm an avid surfer, snowboarder, and explorer of new ideas – both tech-related side projects and the city's best spots
 
-            </p> -->
           </div>
         </div>
-        <div class="mb-4 flow">
-          <Marquee class="[--duration:20s]">
+        <div class="mb-5 flow">
+          <Marquee duration="20s" data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
             <Chip class="marquee-item">.Net</Chip>
             <Chip class="marquee-item">.C </Chip>
             <Chip class="marquee-item">Umbraco</Chip>
             <Chip class="marquee-item">SQL</Chip>
           </Marquee>
-          <Marquee class="[--duration:20s]" :reverse="true">
+          <Marquee duration="10s" :reverse="true" data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
             <Chip class="marquee-item">Nuxt</Chip>
             <Chip class="marquee-item">Vue</Chip>
             <Chip class="marquee-item">Angular</Chip>

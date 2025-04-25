@@ -32,4 +32,5 @@ export interface SectionHeader {
   tag?: string;
   alignment?: Alignment;
   link?: Link;
+  tagElement?: string;
 }

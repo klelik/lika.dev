@@ -5,17 +5,25 @@
         <slot name="tag">{{ tag }}</slot>
       </div>
       <div class="flex" data-repel>
-        <component
-          :is="'resolvedTag'"
+        <h3
           v-if="hasTitle || title"
           class="section-header__title section-header__title-md"
           :class="'titleSize'"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-once="true"
         >
           <slot name="title">{{ title }}</slot>
-        </component>
+        </h3>
         <slot name="link" />
       </div>
-      <p v-if="hasDescription || description" class="section-header__description">
+      <p
+        v-if="hasDescription || description"
+        class="section-header__description"
+        data-aos="fade-up"
+        data-aos-delay="300"
+        data-aos-once="true"
+      >
         <slot name="description">{{ description }}</slot>
       </p>
       <slot />

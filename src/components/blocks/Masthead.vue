@@ -2,16 +2,16 @@
   <div class="masthead">
     <div class="container">
       <div class="masthead__content">
-        <div class="flow flow-gap-3">
+        <div class="flow flow-gap-3" data-aos="fade-up" data-aos-once="true">
           <slot name="tag" />
-          <h1 data-aos="fade-up" data-aos-delay="300" data-aos-once="true" class="text-pretty">
+          <h1 class="text-pretty" data-aos="fade-up" data-aos-once="true" data-aos-delay="100">
             <slot name="title" />
           </h1>
 
           <AttachedButtons
             data-aos="fade-up"
-            data-aos-delay="500"
             data-aos-once="true"
+            data-aos-delay="200"
             class="mobile-only"
             :link="{ url: 'mailto:youremail@example.com' }"
             :rotate="true"
