@@ -18,6 +18,8 @@ COMPONENTS
 @import "components/button";
 @import "components/masthead";
 @import "components/footer";
+@import "components/footer";
+@import "components/section-header";
 
 /* =================================
 LAYOUTS
@@ -28,10 +30,11 @@ LAYOUTS
 @import "layouts/section";
 
 /* ==========================
-GENERATED UTILITIES
+UTILITIES
 ============================= */
 @import "utilities/mixin";
 @import "utilities/colors";
 @import "utilities/fonts";
 @import "utilities/font-size";
 @import "utilities/space";
+@import "utilities/animations";

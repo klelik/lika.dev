@@ -19,7 +19,7 @@
 
     <section class="content-section">
       <div class="container">
-        <LazySectionHeader :alignment="'left'" class="mb-3">
+        <SectionHeader :alignment="'left'" class="mb-3">
           <template #tag>
             <div
               class="flex flex-gap-1"
@@ -46,7 +46,7 @@
               <Arrow class="arrow-cta-highlighted slim" />
             </div>
           </template>
-        </LazySectionHeader>
+        </SectionHeader>
       </div>
       <div class="container">
         <div class="grid grid-max-cols-2 grid-span-last">
@@ -91,7 +91,7 @@
 
     <section class="content-section">
       <div class="container">
-        <LazySectionHeader :alignment="'center'" class="mb-3">
+        <SectionHeader :alignment="'center'" class="mb-3">
           <template #tag>
             <div
               class="flex flex-gap-1"
@@ -114,7 +114,7 @@
               <Arrow class="arrow-cta-highlighted slim" />
             </div>
           </template>
-        </LazySectionHeader>
+        </SectionHeader>
       </div>
       <div class="container">
         <div class="grid">

@@ -36,4 +36,6 @@ const hasTag = computed(() => !!useSlots().tag);
 const hasTitle = computed(() => !!useSlots().title);
 
 const hasDescription = computed(() => !!useSlots().description);
+
+const resolvedTag = computed(() => props.tagElement || "h3");
 </script>

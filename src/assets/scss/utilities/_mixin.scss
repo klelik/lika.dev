@@ -27,3 +27,15 @@
     }
   }
 }
+
+.mobile-only {
+  @include breakpoint(lg, min) {
+    display: none;
+  }
+}
+
+.desktop-only {
+  @include breakpoint(lg, max) {
+    display: block;
+  }
+}
