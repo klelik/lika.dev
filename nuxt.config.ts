@@ -5,9 +5,21 @@ export default defineNuxtConfig({
   components: ['@/components', '@/components/atoms', { path: '@/components/blocks', global: true }],
 
   css: ['@/assets/scss/styles.scss'],
-  modules: ['nuxt-svgo', '@vueuse/nuxt', 'nuxt-aos', '@nuxt/eslint'],
+  modules: ['nuxt-svgo', '@vueuse/nuxt', 'nuxt-aos', '@nuxt/eslint', '@nuxt/image'],
   eslint: {
     // options here
+  },
+  image: {
+    format: ['webp'],
+    screens: {
+      'xs': 320,
+      'sm': 640,
+      'md': 768,
+      'lg': 1024,
+      'xl': 1280,
+      'xxl': 1536,
+      '2xl': 1536
+    }
   },
   aos: {
     // Global settings:

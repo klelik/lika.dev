@@ -36,14 +36,13 @@
         </SectionHeader>
       </div>
       <div class="container">
-        <div class="grid grid-max-cols-2 grid-span-last">
-          <div class="flow flow-gap-2 card card--spread-image card-overlay">
+        <div class="grid grid-span-last">
+          <div class="flow">
             <h4 class="title" data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
               I'm a London-based Full-Stack Developer, building web solutions with a focus on the .NET ecosystem and
               modern frontends. Beyond the code, I'm an avid surfer, snowboarder, and explorer of new ideas – both
               tech-related side projects and the city's best spots
             </h4>
-
           </div>
         </div>
         <div class="mb-5 flow">
@@ -84,14 +83,61 @@
         </SectionHeader>
       </div>
       <div class="container">
-        <div class="grid">
-          <div>card</div>
+        <div class="grid grid-gap-2">
+          <div class="flow">
+            <div class="card project-card">
+              <NuxtImg
+                src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHN1bmlsbGF8ZW58MHx8fHwxNjg3NTY5MjQy&ixlib=rb-4.0.3&q=80&w=1080"
+                alt="Project"
+                class="card__image"
+              />
+            </div>
+            <div class="flex pi-1" data-repel>
+              <p class="card__title">Project Title</p>
+              <div class="flex flex-gap-1">
+                <Chip class="card__tag">Umbraco</Chip>
+                <Chip class="card__tag">Angular</Chip>
+                <Chip class="card__tag">Azure</Chip>
+              </div>
+            </div>
+          </div>
+          <div class="flow">
+            <div class="card project-card">
+              <NuxtImg
+                src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHN1bmlsbGF8ZW58MHx8fHwxNjg3NTY5MjQy&ixlib=rb-4.0.3&q=80&w=1080"
+                alt="Project"
+                class="card__image"
+              />
+            </div>
+            <div class="flex pi-1" data-repel>
+              <p class="card__title">Project Title</p>
+              <Chip class="card__tag">Nuxt</Chip>
+            </div>
+          </div>
+          <div class="flow">
+            <div class="card project-card">
+              <NuxtImg
+                src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHN1bmlsbGF8ZW58MHx8fHwxNjg3NTY5MjQy&ixlib=rb-4.0.3&q=80&w=1080"
+                alt="Project"
+                class="card__image"
+              />
+            </div>
+            <div class="flex pi-1" data-repel>
+              <h5 class="card__title">Project Title</h5>
+              <Chip class="card__tag">React</Chip>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
+    <section class="content-section">
+      <div class="container"></div>
     </section>
   </div>
 </template>
 
 <script setup lang="ts">
+import { NuxtImg } from '#components';
 import Arrow from '@/assets/icons/arrow-right-solid.svg';
+import Chip from '~/components/atoms/Chip.vue';
 </script>

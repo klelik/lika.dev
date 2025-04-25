@@ -119,12 +119,12 @@ h4,
 h5,
 .t-h5 {
   font-size: var(--ts-heading-5, var(--ts-body-large));
-  font-size: var(--lh-heading-5, var(--lh-body-large));
+  line-height: var(--lh-heading-5, var(--lh-body-large));
 }
 h6,
 .t-h6 {
   font-size: var(--ts-heading-6, var(--ts-body-large));
-  font-size: var(--lh-heading-6, var(--lh-body-large));
+  line-height: var(--lh-heading-6, var(--lh-body-large));
 }
 
 p {
