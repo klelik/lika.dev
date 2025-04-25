@@ -5,6 +5,6 @@
 </template>
 
 <script setup lang="ts">
-console.log("app.vue");
+console.log('app.vue');
 const config = useRuntimeConfig();
 </script>

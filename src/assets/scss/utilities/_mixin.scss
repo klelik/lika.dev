@@ -1,4 +1,4 @@
-@import "assets/scss/utilities/breakpoints-map";
+@import 'assets/scss/utilities/breakpoints-map';
 
 @mixin breakpoint($breakpoint, $direction: min) {
   @if map-has-key($breakpoints, $breakpoint) {

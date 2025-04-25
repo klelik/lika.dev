@@ -1,9 +1,6 @@
 <template>
   <header class="site-header container-wide">
-    <div
-      class="site-header__container"
-      :class="{ 'header--scrolled': shrink, 'header-hidden': hide }"
-    >
+    <div class="site-header__container" :class="{ 'header--scrolled': shrink, 'header-hidden': hide }">
       <div class="site-header__content">
         <div class="header__logo">
           <NuxtLink to="/">
@@ -25,10 +22,7 @@
         </nav>
         <div class="socials flex">
           <!-- <DarkMode /> -->
-          <AttachedButtons
-            :link="{ url: 'mailto:youremail@example.com' }"
-            :rotate="true"
-            size="sm"
+          <AttachedButtons :link="{ url: 'mailto:youremail@example.com' }" :rotate="true" size="sm"
             >Get in touch</AttachedButtons
           >
         </div>
@@ -40,20 +34,20 @@
           :aria-label="isOpen ? 'Close menu' : 'Open menu'"
           :aria-expanded="isOpen"
           class="hamburger"
-          @click="toggle"
           :class="{ active: isOpen }"
+          @click="toggle"
         >
-          <span class="hamburger-inner" aria-hidden="true"> </span>
+          <span class="hamburger-inner" aria-hidden="true" />
         </button>
       </div>
     </div>
-    <MobileHeader :isOpen="isOpen" @close="close" />
+    <MobileHeader :is-open="isOpen" @close="close" />
     <!-- //Mobile -->
   </header>
 </template>
 
 <script setup lang="ts">
-import { useWindowScroll } from "@vueuse/core";
+import { useWindowScroll } from '@vueuse/core';
 
 const { y } = useWindowScroll();
 const shrink = ref(false);
@@ -61,7 +55,7 @@ const hide = ref(false);
 const isOpen = ref<boolean>(false);
 
 const handleKeydownEvent = (event: KeyboardEvent) => {
-  if (event.key === "ESC") close();
+  if (event.key === 'ESC') close();
 };
 
 const toggle = () => {
@@ -69,25 +63,25 @@ const toggle = () => {
   else open();
 };
 const open = () => {
-  document.addEventListener("DOWN", handleKeydownEvent);
+  document.addEventListener('DOWN', handleKeydownEvent);
   isOpen.value = true;
   shrink.value = true;
 };
 
 const close = () => {
-  document.removeEventListener("DOWN", handleKeydownEvent);
+  document.removeEventListener('DOWN', handleKeydownEvent);
   isOpen.value = false;
 };
 
 watch(y, (newValue, oldValue) => {
   if (isOpen.value) return;
 
-  let scrollDirection = "";
-  scrollDirection = newValue > oldValue ? "down" : "up";
+  let scrollDirection = '';
+  scrollDirection = newValue > oldValue ? 'down' : 'up';
   shrink.value = newValue > 10;
 
   if (newValue > 200) {
-    hide.value = scrollDirection === "down";
+    hide.value = scrollDirection === 'down';
   } else {
     hide.value = false;
   }

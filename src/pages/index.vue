@@ -21,20 +21,13 @@
       <div class="container">
         <SectionHeader :alignment="'left'" class="mb-3">
           <template #tag>
-            <div
-              class="flex flex-gap-1"
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-once="true"
-            >
+            <div class="flex flex-gap-1" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
               About me
               <Arrow class="arrow-cta-highlighted--tiny" />
             </div>
           </template>
           <template #title>
-            <h3 data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
-              The Human Behind the Code.
-            </h3>
+            <h3 data-aos="fade-up" data-aos-delay="200" data-aos-once="true">The Human Behind the Code.</h3>
           </template>
           <template #description>
             <p data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
@@ -52,39 +45,29 @@
         <div class="grid grid-max-cols-2 grid-span-last">
           <div class="flow flow-gap-2 card card--spread-image card-overlay">
             <h4 class="title" data-aos="fade-up" data-aos-delay="200">
-              My Journey
+              I'm a London-based Full-Stack Developer, building web solutions with a focus on the .NET ecosystem and
+              modern frontends. Beyond the code, I'm an avid surfer, snowboarder, and explorer of new ideas – both
+              tech-related side projects and the city's best spots
             </h4>
-            <p data-aos="fade-up" data-aos-delay="300">
-              "Hello, World!" was just the beginning. Now, as a Full-Stack
-              Developer in London, I build cool web stuff and make digital
-              magic. Always evolving.
-            </p>
-          </div>
+            <!-- <p data-aos="fade-up" data-aos-delay="300">
+              I'm a London-based Full-Stack Developer, building web solutions with a focus on the .NET ecosystem and modern frontends. Beyond the code, I'm an avid surfer, snowboarder, and explorer of new ideas – both tech-related side projects and the city's best spots
 
-          <div class="flow flow-gap-2 card card--spread-image card-overlay">
-            <h4 class="title" data-aos="fade-up" data-aos-delay="400">
-              Core Technologies
-            </h4>
-            <p data-aos="fade-up" data-aos-delay="600">
-              Umbraco CMS,C# ASP.NET MVC,.NET Core,Entity
-              Framework,Azure,Algolia,NuxtJs,AngularJS,Javascript/jQuery,Typescript,Bootstrap
-              Framework,SCSS/SCSS,HTML5,Graphic Design
-            </p>
+            </p> -->
           </div>
-          <div class="flow flow-gap-2 card card--spread-image card-overlay">
-            <h4 class="title" data-aos="fade-up" data-aos-delay="800">
-              The Fun Stuff
-            </h4>
-            <p data-aos="fade-up" data-aos-delay="1000">
-              When I'm not coding, it's all about riding waves or carving snow.
-              You'll also catch me geeking out on side projects and soaking up
-              the buzz at tech events. Away from the screen, I'm probably
-              plotting my next surf or snow trip, exploring some cool corner of
-              London and its food scene, or lost in the latest sci-fi flick.
-              These off-hours keep things interesting and definitely sneak their
-              way into how I think about tech.
-            </p>
-          </div>
+        </div>
+        <div class="mb-4 flow">
+          <Marquee class="[--duration:20s]">
+            <Chip class="marquee-item">.Net</Chip>
+            <Chip class="marquee-item">.C </Chip>
+            <Chip class="marquee-item">Umbraco</Chip>
+            <Chip class="marquee-item">SQL</Chip>
+          </Marquee>
+          <Marquee class="[--duration:20s]" :reverse="true">
+            <Chip class="marquee-item">Nuxt</Chip>
+            <Chip class="marquee-item">Vue</Chip>
+            <Chip class="marquee-item">Angular</Chip>
+            <Chip class="marquee-item">React</Chip>
+          </Marquee>
         </div>
       </div>
     </section>
@@ -93,20 +76,13 @@
       <div class="container">
         <SectionHeader :alignment="'center'" class="mb-3">
           <template #tag>
-            <div
-              class="flex flex-gap-1"
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-once="true"
-            >
+            <div class="flex flex-gap-1" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
               Work sample
               <Arrow class="arrow-cta-highlighted--tiny" />
             </div>
           </template>
           <template #title>
-            <h3 data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
-              Some of my Work.
-            </h3>
+            <h3 data-aos="fade-up" data-aos-delay="200" data-aos-once="true">Some of my Work.</h3>
           </template>
 
           <template #link>
@@ -126,5 +102,5 @@
 </template>
 
 <script setup lang="ts">
-import Arrow from "@/assets/icons/arrow-right-solid.svg";
+import Arrow from '@/assets/icons/arrow-right-solid.svg';
 </script>

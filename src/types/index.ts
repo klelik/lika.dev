@@ -13,8 +13,8 @@ export interface Image {
   caption?: string;
 }
 
-export type Size = "sm" | "md" | "lg";
-export type Alignment = "left" | "center" | "right";
+export type Size = 'sm' | 'md' | 'lg';
+export type Alignment = 'left' | 'center' | 'right';
 
 //=============================
 // Components

@@ -1,15 +1,6 @@
 <template>
-  <div
-    class="attached-buttons"
-    @mouseover="handleMouseOver"
-    @mouseleave="handleMouseLeave"
-  >
-    <svg
-      width="0"
-      height="0"
-      class="absolute"
-      color-interpolation-filters="sRGB"
-    >
+  <div class="attached-buttons" @mouseover="handleMouseOver" @mouseleave="handleMouseLeave">
+    <svg width="0" height="0" class="absolute" color-interpolation-filters="sRGB">
       <defs>
         <filter id="buttonFilter">
           <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
@@ -25,18 +16,8 @@
       </defs>
     </svg>
 
-    <NuxtLink
-      :href="link.url"
-      style="filter: url(#buttonFilter)"
-      class="attached-buttons"
-    >
-      <span
-        class="cta"
-        primary-no-hover
-        :size="size"
-        style="filter: url(#buttonFilter)"
-        ><slot
-      /></span>
+    <NuxtLink :href="link.url" style="filter: url(#buttonFilter)" class="attached-buttons">
+      <span class="cta" primary-no-hover :size="size" style="filter: url(#buttonFilter)"><slot /></span>
       <span
         primary-no-hover
         :size="size"
@@ -53,8 +34,8 @@
 //=============================
 // INTERFACES
 //=============================
-import { type AttachedButtons } from "@/types/index";
-import Arrow from "@/assets/icons/arrow-right-solid.svg";
+import type { AttachedButtons } from '@/types/index';
+import Arrow from '@/assets/icons/arrow-right-solid.svg';
 
 //=============================
 // PROPS & EMITS
@@ -62,8 +43,8 @@ import Arrow from "@/assets/icons/arrow-right-solid.svg";
 const props = withDefaults(defineProps<AttachedButtons>(), {
   rotate: false,
   scale: 1,
-  translateX: "0.45rem",
-  size: "sm",
+  translateX: '0.45rem',
+  size: 'sm'
 });
 
 const hoverState = ref(false);
@@ -72,9 +53,9 @@ const getTransformStyle = computed(() => {
   return {
     transform: `
         translateX(${props.translateX})
-        ${props.rotate ? "rotate(45deg)" : ""}
+        ${props.rotate ? 'rotate(45deg)' : ''}
         scale(${props.scale})
-      `,
+      `
   };
 });
 

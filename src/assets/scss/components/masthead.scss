@@ -1,4 +1,4 @@
-@import "assets/scss/utilities/mixin";
+@import 'assets/scss/utilities/mixin';
 
 .masthead {
   display: flex;
@@ -15,18 +15,14 @@
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     opacity: 0.9;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0) 50%,
-      var(--bg-color) 100%
-    );
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, var(--bg-color) 100%);
     @include breakpoint(lg, max) {
       // display: none;
     }
@@ -52,11 +48,7 @@
   width: var(--size);
   height: var(--size);
   filter: blur(calc(var(--size) / 5));
-  background-image: linear-gradient(
-    to top,
-    var(--bg-color),
-    var(--c-main-color)
-  );
+  background-image: linear-gradient(to top, var(--bg-color), var(--c-main-color));
   animation: rotate var(--speed) var(--easing) alternate infinite;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 

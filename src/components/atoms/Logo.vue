@@ -1,11 +1,6 @@
 <template>
   <template v-if="isDarkTheme">
-    <svg
-      width="58.62"
-      height="20.46"
-      viewBox="0 0 58.62 20.46"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="58.62" height="20.46" viewBox="0 0 58.62 20.46" xmlns="http://www.w3.org/2000/svg">
       <g
         id="svgGroup"
         stroke-linecap="round"
@@ -25,12 +20,7 @@
   </template>
 
   <template v-else>
-    <svg
-      width="58.62"
-      height="20.46"
-      viewBox="0 0 58.62 20.46"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="58.62" height="20.46" viewBox="0 0 58.62 20.46" xmlns="http://www.w3.org/2000/svg">
       <g
         id="svgGroup"
         stroke-linecap="round"
@@ -53,7 +43,7 @@
 <script setup lang="ts">
 let isDarkTheme = false;
 
-if (process.client) {
-  isDarkTheme = document.documentElement.classList.contains("dark");
+if (import.meta.client) {
+  isDarkTheme = document.documentElement.classList.contains('dark');
 }
 </script>

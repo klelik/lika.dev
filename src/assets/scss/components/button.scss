@@ -1,25 +1,25 @@
 button,
 .cta {
-  --button-size: "md";
+  --button-size: 'md';
   --button-padding-block: calc(var(--space-1));
   --button-padding-inline: var(--space-1);
   --button-radius: var(--radius-default);
   --button-text: var(--c-deep-dark);
   text-decoration: none;
 
-  &[size="sm"] {
+  &[size='sm'] {
     --button-padding-block: calc(var(--space-0-5));
     --button-padding-inline: calc(var(--space-1));
     font-size: 0.875rem;
   }
 
-  &[size="md"] {
+  &[size='md'] {
     --button-padding-block: calc(var(--space-2));
     --button-padding-inline: calc(var(--space-2));
     font-size: 1rem;
   }
 
-  &[size="lg"] {
+  &[size='lg'] {
     --button-padding-block: calc(var(--space-3));
     --button-padding-inline: calc(var(--space-3));
     font-size: var(--ts-heading-5);
@@ -41,7 +41,9 @@ button:not([disabled]),
   line-height: 1;
   display: block;
   border-color: var(--button-border, var(--c-main-color));
-  transition: background-color 0.3s, border-color 0.3s;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
 }
 
 button[secondary],
@@ -72,12 +74,12 @@ button[primary-no-hover],
   position: relative;
 
   & .cta {
-    &[size="md"] {
+    &[size='md'] {
       --button-padding-block: calc(var(--space-2));
       --button-padding-inline: calc(var(--space-2));
     }
 
-    &[size="lg"] {
+    &[size='lg'] {
       --button-padding-block: calc(var(--space-3));
       --button-padding-inline: calc(var(--space-3));
     }

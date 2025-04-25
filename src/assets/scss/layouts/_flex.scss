@@ -8,7 +8,7 @@ Simple Flexbox Layout
   align-items: var(--flex-align-vertical, center);
 }
 
-.flex[data-dir="rtl"] {
+.flex[data-dir='rtl'] {
   flex-direction: row-reverse;
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <span class="dot"> </span>
+  <span class="dot" />
 </template>
 <style scoped lang="scss">
 .dot {
@@ -21,7 +21,7 @@
 
   &:before,
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;

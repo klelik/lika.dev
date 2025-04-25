@@ -13,21 +13,18 @@
         >
           <slot name="title">{{ title }}</slot>
         </component>
-        <slot name="link"></slot>
+        <slot name="link" />
       </div>
-      <p
-        v-if="hasDescription || description"
-        class="section-header__description"
-      >
+      <p v-if="hasDescription || description" class="section-header__description">
         <slot name="description">{{ description }}</slot>
       </p>
-      <slot></slot>
+      <slot />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { type SectionHeader } from "~/types";
+import type { SectionHeader } from '~/types';
 
 const props = withDefaults(defineProps<SectionHeader>(), {});
 
@@ -37,5 +34,5 @@ const hasTitle = computed(() => !!useSlots().title);
 
 const hasDescription = computed(() => !!useSlots().description);
 
-const resolvedTag = computed(() => props.tagElement || "h3");
+const resolvedTag = computed(() => props.tagElement || 'h3');
 </script>
