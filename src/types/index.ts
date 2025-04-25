@@ -14,6 +14,7 @@ export interface Image {
 }
 
 export type Size = "sm" | "md" | "lg";
+export type Alignment = "left" | "center" | "right";
 
 //=============================
 // Components
@@ -24,4 +25,11 @@ export interface AttachedButtons {
   scale?: number;
   translateX?: string;
   size?: Size;
+}
+export interface SectionHeader {
+  title?: string;
+  description?: string;
+  tag?: string;
+  alignment?: Alignment;
+  link?: Link;
 }
