@@ -6,9 +6,7 @@ export default defineNuxtConfig({
 
   css: ['@/assets/scss/styles.scss'],
   modules: ['nuxt-svgo', '@vueuse/nuxt', 'nuxt-aos', '@nuxt/eslint', '@nuxt/image'],
-  eslint: {
-    // options here
-  },
+  eslint: {},
   image: {
     format: ['webp'],
     screens: {

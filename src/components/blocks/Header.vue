@@ -22,7 +22,7 @@
         </nav>
         <div class="socials flex">
           <!-- <DarkMode /> -->
-          <AttachedButtons :link="{ url: 'mailto:youremail@example.com' }" :rotate="true" size="sm"
+          <AttachedButtons :link="{ url: 'mailto:contact@lika.dev' }" :rotate="true" size="sm"
             >Get in touch</AttachedButtons
           >
         </div>

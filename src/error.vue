@@ -1,24 +1,26 @@
 <template>
-  <div class="">
-    <template v-if="error.statusCode === 404">
-      <h1>404!</h1>
-      <p>Sorry, that page doesn't exist.</p>
+  <div>
+    <template v-if="error?.statusCode === 404">
+      <Masthead>
+        <template #title>
+          404! <br />
+          <!-- {{ error?.statusMessage }} -->
+        </template>
+      </Masthead>
     </template>
     <template v-else>
-      <h1>Dang</h1>
-      <p>
-        <strong>{{ error.message }}</strong>
-      </p>
-      <p>It looks like something broke.</p>
-      <p>Sorry about that.</p>
+      <Masthead>
+        <template #title>
+          <!-- {{ error?.statusCode }} <br />
+          {{ error?.statusMessage }} -->
+          shit happens! <br />
+        </template>
+      </Masthead>
     </template>
-    <p>
-      Go back to your
-      <a @click="handleError"> hompepage. </a>
-    </p>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const error = useError();
+console.log('error', error.value);
 </script>

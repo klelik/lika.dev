@@ -1,0 +1,50 @@
+name: Deploy to GitHub Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Setup Bun properly
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      # (Optional but smart) Setup Node.js, Bun sometimes needs Node APIs
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Install dependencies with Bun
+      - run: bun install
+
+      # Build the Nuxt app
+      - run: |
+          NODE_ENV=production bun run generate
+
+      # Upload the static site to GitHub Pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./.output/public
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github_pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

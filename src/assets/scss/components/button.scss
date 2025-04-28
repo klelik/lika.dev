@@ -102,7 +102,7 @@ button[primary-no-hover],
 // Chip component
 .chip {
   --chip-bg: var(--text-color);
-  --chip-text: var(--c-grey);
+  --chip-text: var(--main-color);
 
   background-color: var(--chip-bg, var(--c-main-color));
   border-radius: var(--chip-radius, var(--radius-default));

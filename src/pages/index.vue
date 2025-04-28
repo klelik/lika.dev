@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/valid-v-for -->
 <template>
   <div>
     <Masthead>
@@ -64,7 +65,7 @@
 
     <section class="content-section">
       <div class="container">
-        <SectionHeader :alignment="'center'" class="mb-3">
+        <SectionHeader :alignment="'left'" class="mb-3">
           <template #tag>
             <div class="flex flex-gap-1" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
               Work sample
@@ -84,49 +85,19 @@
       </div>
       <div class="container">
         <div class="grid grid-gap-2">
-          <div class="flow">
-            <div class="card project-card">
-              <NuxtImg
-                src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHN1bmlsbGF8ZW58MHx8fHwxNjg3NTY5MjQy&ixlib=rb-4.0.3&q=80&w=1080"
-                alt="Project"
-                class="card__image"
-              />
-            </div>
-            <div class="flex pi-1" data-repel>
-              <p class="card__title">Project Title</p>
-              <div class="flex flex-gap-1">
-                <Chip class="card__tag">Umbraco</Chip>
-                <Chip class="card__tag">Angular</Chip>
-                <Chip class="card__tag">Azure</Chip>
-              </div>
-            </div>
-          </div>
-          <div class="flow">
-            <div class="card project-card">
-              <NuxtImg
-                src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHN1bmlsbGF8ZW58MHx8fHwxNjg3NTY5MjQy&ixlib=rb-4.0.3&q=80&w=1080"
-                alt="Project"
-                class="card__image"
-              />
-            </div>
-            <div class="flex pi-1" data-repel>
-              <p class="card__title">Project Title</p>
-              <Chip class="card__tag">Nuxt</Chip>
-            </div>
-          </div>
-          <div class="flow">
-            <div class="card project-card">
-              <NuxtImg
-                src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHN1bmlsbGF8ZW58MHx8fHwxNjg3NTY5MjQy&ixlib=rb-4.0.3&q=80&w=1080"
-                alt="Project"
-                class="card__image"
-              />
-            </div>
-            <div class="flex pi-1" data-repel>
-              <h5 class="card__title">Project Title</h5>
-              <Chip class="card__tag">React</Chip>
-            </div>
-          </div>
+          <Card
+            v-for="(project, index) in projectItems"
+            :key="index"
+            :title="project.title"
+            :tags="project.tags"
+            :image="{
+              src: project.tileImage.src,
+              alt: project.tileImage.altText,
+              width: 1080,
+              height: 720
+            }"
+            :description="project.summary"
+          />
         </div>
       </div>
     </section>
@@ -137,7 +108,18 @@
 </template>
 
 <script setup lang="ts">
-import { NuxtImg } from '#components';
 import Arrow from '@/assets/icons/arrow-right-solid.svg';
 import Chip from '~/components/atoms/Chip.vue';
+import type { Project } from '@/types';
+
+// Get Projects
+const projectItems = ref<Project[]>([]);
+
+const { get: getProjects } = useProjects();
+const { success: projectsSuccess, data: projectsData, total: projectsTotal } = await getProjects(3, true);
+console.log('projectsSuccess', projectsSuccess);
+if (projectsSuccess && projectsData) {
+  projectItems.value = projectsData;
+}
+console.log('projectsData', projectItems.value);
 </script>
