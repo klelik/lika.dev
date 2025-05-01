@@ -1,6 +1,6 @@
 <template>
-  <footer class="footer">
-    <div class="section-inverse-theme pb-5 mt-2">
+  <footer class="footer section-inverse-theme">
+    <div class="pb-5 mt-2">
       <div class="footer__content container">
         <div class="flex" data-column>
           <h2>Let's make something you'll love!</h2>
