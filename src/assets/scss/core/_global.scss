@@ -1,6 +1,9 @@
 :root {
   --radius-default: 1.925rem;
   --radius-pill: 3.125rem;
+
+  // Header Height
+  --header-height: 4.75rem;
 }
 
 /* ===============================
@@ -27,8 +30,9 @@ main {
   flex: auto;
   position: relative;
   background-color: var(--bg-color);
+  color: var(--text-color);
   z-index: 1;
-  border-radius: 0 0 var(--radius-pill) var(--radius-pill);
+  border-radius: 0 0 50px 50px;
 }
 
 .page-wrapper {
@@ -126,10 +130,6 @@ h6,
 .t-h6 {
   font-size: var(--ts-heading-6, var(--ts-body-large));
   line-height: var(--lh-heading-6, var(--lh-body-large));
-}
-
-p {
-  color: var(--text-color);
 }
 
 .t-label {

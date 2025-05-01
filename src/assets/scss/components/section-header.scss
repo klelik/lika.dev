@@ -31,6 +31,7 @@
   font-family: monospace;
   letter-spacing: 1px;
   margin-bottom: var(--space-1);
+  font-weight: 500;
 }
 
 .section-header__title {
@@ -86,5 +87,50 @@
     @include breakpoint(lg, max) {
       display: block;
     }
+  }
+}
+
+//EXPERIENCE PAGE RESUME
+.resume-list-item {
+  border-left: 2px solid var(--c-main-color);
+  padding: 0 0 2rem 2rem;
+  position: relative;
+  color: var(--text-color);
+
+  &__header {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include breakpoint(lg, max) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    & > &__date {
+      margin-top: var(--space-1);
+
+      @include breakpoint(lg, max) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &::before {
+    background: var(--bg-color);
+    border: 2px solid var(--c-main-color);
+    border-radius: 50%;
+    content: '';
+    height: 1rem;
+    left: -1px;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    width: 1rem;
+  }
+
+  & .rte-content {
+    color: var(--c-grey);
   }
 }

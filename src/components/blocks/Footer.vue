@@ -1,5 +1,5 @@
 <template>
-  <footer class=" footer">
+  <footer class="footer">
     <div class="section-inverse-theme pb-5 mt-2">
       <div class="footer__content container">
         <div class="flex" data-column>
@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <div class="footer__bottom p-1" >
+    <div class="footer__bottom p-1">
       <p>© 2025 - All rights reserved</p>
     </div>
   </footer>

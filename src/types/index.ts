@@ -26,6 +26,7 @@ export interface AttachedButtons {
   translateX?: string;
   size?: Size;
 }
+
 export interface SectionHeader {
   title?: string;
   description?: string;
@@ -33,6 +34,10 @@ export interface SectionHeader {
   alignment?: Alignment;
   link?: Link;
   tagElement?: string;
+  titleTag?: string;
+  animation?: boolean;
+  containerSize?: Size;
+  titleSize?: string;
 }
 
 export interface Card {

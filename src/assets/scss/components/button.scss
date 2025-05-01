@@ -116,3 +116,10 @@ button[primary-no-hover],
   //     padding: var(--space-2);
   // }
 }
+
+.chip.tiny {
+  --chip-bg: var(--main-color);
+  --chip-padding: var(--space-05) var(--space-1);
+  --chip-text-size: var(--ts-heading-5);
+  --chip-text: var(--c-deep-dark);
+}

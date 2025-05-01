@@ -1,5 +1,11 @@
 @import 'assets/scss/utilities/mixin';
 
+$container-max-widths-slim: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px
+);
+
 $container-max-widths: (
   sm: 540px,
   md: 720px,
@@ -64,6 +70,23 @@ $container-max-widths-wide: (
   }
 }
 
+.container-slim {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+
+  @include breakpoint(sm) {
+    max-width: map-get($container-max-widths-wide, sm);
+  }
+  @include breakpoint(md) {
+    max-width: map-get($container-max-widths-wide, md);
+  }
+  @include breakpoint(lg) {
+    max-width: map-get($container-max-widths-wide, lg);
+  }
+}
 .content-section {
   padding: 4rem 0;
 
@@ -85,4 +108,15 @@ $container-max-widths-wide: (
   &:last-of-type {
     padding-bottom: 0;
   }
+}
+
+.unstyled-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.unstyled-list > li {
+  margin: 0;
+  padding: 0;
 }

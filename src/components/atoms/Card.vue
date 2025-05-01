@@ -25,7 +25,7 @@
       <div :class="[tags && tags.length <= 3 ? 'flex' : 'flow flow-gap-1']" data-repel>
         <h5 v-if="title" class="card__title">{{ title }}</h5>
         <div class="flex flex-gap-1" data-wrap>
-          <Chip v-for="tag in tags" class="card__tag" style="--chip-text: var(--c-deep-dark)">{{ tag }}</Chip>
+          <Chip v-for="tag in tags" class="card__tag">{{ tag }}</Chip>
         </div>
       </div>
 

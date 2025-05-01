@@ -25,6 +25,7 @@
       --chip-bg: var(--main-color);
       --chip-padding: var(--space-05) var(--space-1);
       --chip-text-size: var(--ts-tiny);
+      --chip-text: var(--c-deep-dark);
     }
 
     &__description {
@@ -88,7 +89,7 @@
     transition:
       transform 0.3s cubic-bezier(0.39, 0.57, 0.56, 1),
       opacity 0.3s ease;
-      cursor: pointer;
+    cursor: pointer;
 
     &--arrow {
       height: 3em !important;
