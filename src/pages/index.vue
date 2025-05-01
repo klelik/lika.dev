@@ -84,7 +84,7 @@
         </SectionHeader>
       </div>
       <div class="container">
-        <div class="grid grid-gap-2">
+        <div class="grid grid-gap-3">
           <Card
             v-for="(project, index) in projectItems"
             :key="index"

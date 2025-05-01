@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="footer__bottom p-1" >
-      <p>© 2023 - All rights reserved</p>
+      <p>© 2025 - All rights reserved</p>
     </div>
   </footer>
 </template>
