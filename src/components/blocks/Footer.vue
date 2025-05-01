@@ -1,6 +1,6 @@
 <template>
-  <footer class="">
-    <div class="section-inverse-theme footer">
+  <footer class=" footer">
+    <div class="section-inverse-theme pb-5 mt-2">
       <div class="footer__content container">
         <div class="flex" data-column>
           <h2>Let's make something you'll love!</h2>
@@ -9,9 +9,9 @@
           >
         </div>
       </div>
-      <div class="footer__bottom container">
-        <p>© 2023 - All rights reserved</p>
-      </div>
+    </div>
+    <div class="footer__bottom p-1" >
+      <p>© 2023 - All rights reserved</p>
     </div>
   </footer>
 </template>

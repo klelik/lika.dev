@@ -53,6 +53,9 @@ Space utility classes
 @include tokensToUtils($tokens, $vars, 'm', 'margin');
 @include tokensToUtils($tokens, $vars, 'mi', 'margin-inline');
 @include tokensToUtils($tokens, $vars, 'mb', 'margin-block');
+@include tokensToUtils($tokens, $vars, 'mt', 'margin-top');
+@include tokensToUtils($tokens, $vars, 'mb', 'margin-bottom');
+
 
 // Padding
 @include tokensToUtils($tokens, $vars, 'p', 'padding');

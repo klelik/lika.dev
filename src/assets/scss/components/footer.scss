@@ -5,6 +5,10 @@
     color: var(--bg-color);
   }
 
+  & p {
+    color: var(--bg-color);
+  }
+
   &__content {
     display: flex;
     justify-content: center;
@@ -14,7 +18,7 @@
   }
 }
 
-.footer .footer__bottom {
+.footer__bottom {
   display: flex;
   justify-content: space-between;
 }
